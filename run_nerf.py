@@ -957,7 +957,9 @@ def train():
 
 
 if __name__=='__main__':
-    torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    # torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    torch.set_default_dtype(torch.float32)
+    torch.set_default_device("cuda")   # 或 "cpu"
     # please uncomment the code starts with `wandb` to add your wandb project tracking
     # wandb.init(project="nerf_pytorch_dv")
 
